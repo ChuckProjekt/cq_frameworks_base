@@ -6691,7 +6691,7 @@ public final class ActivityRecord extends WindowToken implements WindowManagerSe
     }
 
     private boolean shouldUseEmptySplashScreen(ActivityRecord sourceRecord, boolean startActivity) {
-        if (sourceRecord == null && !startActivity) {
+        if (sourceRecord == null && !startActivity && task != null) {
             // Use empty style if this activity is not top activity. This could happen when adding
             // a splash screen window to the warm start activity which is re-create because top is
             // finishing.
